@@ -1,0 +1,62 @@
+ :root {
+  --ink: #101010; --panel: #191817; --gold: #c8a66b; --cream: #f5f0e8;
+  --muted: #b9b1a5; --line: rgba(200,166,107,.28);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--ink); color: var(--cream); font-family: "DM Sans", sans-serif; }
+.navbar { background: rgba(13,13,13,.94); border-bottom: 1px solid var(--line); padding: 17px 0; backdrop-filter: blur(12px); }
+.navbar-brand, .footer-brand { color: var(--cream); font-family: "Playfair Display", serif; letter-spacing: .14em; font-size: 1.05rem; text-decoration: none; }
+.navbar-brand span { color: var(--gold); }
+.nav-link { color: #e7dfd3 !important; font-size: .88rem; margin: 0 .45rem; }
+.nav-link:hover { color: var(--gold) !important; }
+.btn-gold { background: var(--gold); border: 1px solid var(--gold); color: #17130d; border-radius: 2px; padding: 12px 23px; font-weight: 600; letter-spacing: .02em; }
+.btn-gold:hover { background: #dfc18d; border-color: #dfc18d; color: #17130d; transform: translateY(-2px); }
+.hero { min-height: 760px; height: 94vh; max-height: 980px; position: relative; display: flex; align-items: center; background: #171412 url("../assets/images/abaya-collection-hero.png") center 36%/cover no-repeat; }
+.hero-shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(8,8,8,.88) 0%, rgba(8,8,8,.62) 42%, rgba(8,8,8,.08) 100%); }
+.hero-content { position: relative; z-index: 1; padding-top: 70px; }
+.eyebrow { color: var(--gold); font-size: .7rem; letter-spacing: .22em; font-weight: 600; margin-bottom: 18px; }
+h1, h2, h3, h4 { font-family: "Playfair Display", serif; font-weight: 500; }
+.hero h1 { font-size: clamp(3.6rem, 7vw, 6.7rem); line-height: 1.02; max-width: 650px; margin-bottom: 25px; }
+h1 em, h2 em { color: var(--gold); font-weight: 500; }
+.hero-copy { color: #e1d9ce; max-width: 470px; line-height: 1.8; margin-bottom: 30px; }
+.hero-note { position: absolute; right: 4%; bottom: 30px; color: #e8d8ba; font-size: .65rem; letter-spacing: .2em; writing-mode: vertical-rl; }
+.section-pad { padding: 105px 0; }
+.narrow { max-width: 760px; }
+h2 { font-size: clamp(2.4rem, 4vw, 3.6rem); margin-bottom: 20px; }
+.muted { color: var(--muted); line-height: 1.8; }
+.collections { background: #151413; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.section-heading { display: flex; justify-content: space-between; align-items: end; gap: 25px; margin-bottom: 38px; }
+.heading-note { max-width: 290px; }
+.collection-card { background: #201e1b; border: 1px solid var(--line); height: 100%; }
+.collection-image { min-height: 430px; background-image: url("../assets/images/abaya-collection-hero.png"); background-size: 220% auto; transition: background-size .5s ease, filter .5s ease; }
+.party-image { background-position: 4% 44%; }
+.casual-image { background-position: 96% 44%; }
+.collection-card:hover .collection-image { background-size: 235% auto; filter: brightness(1.08); }
+.collection-info { padding: 28px; display: flex; justify-content: space-between; align-items: end; gap: 20px; }
+.collection-info .eyebrow { font-size: .58rem; margin-bottom: 9px; }
+.collection-info h3 { font-size: 1.8rem; }
+.collection-info .muted { font-size: .9rem; max-width: 330px; margin-bottom: 0; }
+.text-link { color: var(--gold); text-decoration: none; white-space: nowrap; font-size: .85rem; }
+.text-link:hover { color: #f0d6a6; }
+.text-link span { margin-left: 6px; }
+.small-note { color: #91897e; font-size: .75rem; }
+.promise { background: #100f0e; }
+.promise-icon { color: var(--gold); font-size: 2rem; margin-bottom: 15px; }
+.promise h4 { font-size: 1.25rem; }
+.promise p { font-size: .85rem; }
+.contact { background: radial-gradient(ellipse at center, #29231b 0%, #101010 70%); }
+.site-footer { padding: 28px 0; border-top: 1px solid var(--line); color: #a9a094; font-size: .78rem; }
+.footer-brand { color: var(--gold); font-size: .9rem; }
+@media (max-width: 767px) {
+  .hero { min-height: 680px; height: 88vh; background-position: 58% center; }
+  .hero-shade { background: linear-gradient(90deg, rgba(8,8,8,.88), rgba(8,8,8,.38)); }
+  .hero-content { padding-top: 85px; }
+  .hero-note { display: none; }
+  .section-pad { padding: 75px 0; }
+  .section-heading { display: block; }
+  .heading-note { margin-top: 15px; }
+  .collection-image { min-height: 350px; background-size: 240% auto; }
+  .collection-info { display: block; }
+  .text-link { display: inline-block; margin-top: 18px; }
+}
